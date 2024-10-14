@@ -4,7 +4,6 @@ import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -42,7 +41,7 @@ public class RunRepository {
                 1,
                 "Monday Morning Run",
                 LocalDateTime.now(),
-                LocalDateTime.now().plus(30, ChronoUnit.MINUTES),
+                LocalDateTime.now().plusMinutes(30),
                 3,
                 Location.INDOOR
         ));
@@ -51,7 +50,7 @@ public class RunRepository {
                 2,
                 "Wednesday Evening Run",
                 LocalDateTime.now(),
-                LocalDateTime.now().plus(1, ChronoUnit.HOURS),
+                LocalDateTime.now().plusHours(1),
                 6,
                 Location.OUTDOOR
         ));
